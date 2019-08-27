@@ -11,9 +11,17 @@ fs.readFile('./hello.txt', (err, data) => {
 const file = fs.readFileSync('./hello.txt'); 
 console.log('Sync', file.toString());  
 
-fs.appendFile('./hello.txt', 'This is sooooooo cool', err => {
-  if (err) {
+// Append 
+// fs.appendFile('./hello.txt', 'This is sooooooo cool', err => {
+  // if (err) {
+   // console.log(err)
+  // }
+// })  
+
+// Write
+fs.writeFile('bye.txt', 'Sad to see you go!', err => {
+ if(err) {
    console.log(err)
-  }
+ }
 })
   
